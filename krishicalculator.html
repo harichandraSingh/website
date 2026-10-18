@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Krishi Calculator</title>
+<style>
+body{font-family:Arial,sans-serif;margin:0;background:#f4f7f4}
+header,footer{background:#2e7d32;color:#fff;text-align:center;padding:16px}
+.profile-photo{width:110px;height:110px;margin:0 auto 12px;border-radius:50%;overflow:hidden;border:4px solid #fff;box-shadow:0 3px 10px rgba(0,0,0,.25);background:#e8f5e9;display:flex;align-items:center;justify-content:center}
+.profile-photo img{width:100%;height:100%;object-fit:cover;display:block}
+.profile-placeholder{font-size:42px;color:#2e7d32}
+.contact-card{text-align:center}
+.social-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:15px}
+.social-links a{display:inline-flex;align-items:center;justify-content:center;min-width:150px;padding:12px 18px;border-radius:8px;color:#fff;text-decoration:none;font-weight:bold;box-sizing:border-box;transition:transform .2s,opacity .2s}
+.social-links a:hover{transform:translateY(-2px);opacity:.9}
+.facebook{background:#1877f2}.youtube{background:#ff0000}.whatsapp{background:#25d366}
+@media(max-width:600px){.social-links{flex-direction:column}.social-links a{width:100%}}
+.container{max-width:1000px;margin:auto;padding:20px}
+.card{background:#fff;padding:20px;margin-bottom:20px;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,.1)}
+h2{color:#2e7d32}
+input,select,button{width:100%;padding:10px;margin:6px 0;box-sizing:border-box}
+button{background:#2e7d32;color:white;border:none;cursor:pointer}
+.result{margin-top:10px;font-weight:bold}
+</style>
+</head>
+<body>
+<header>
+<div class="profile-photo">
+  <img src="/Assets/profile.jpg" alt="Harichandra Singh (Harish)" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+  <div class="profile-placeholder" style="display:none;">👤</div>
+</div>
+<h1>Krishi Calculator</h1>
+<p>Developed By Harichandra Singh (Harish)</p>
+</header>
+
+<div class="container">
+
+<div class="card">
+<h2>Seed Requirement Calculator</h2>
+<p><b>Source: Krishi Diary 2083</b></p>
+<select id="crop">
+<option value="rice">Rice</option>
+<option value="maize">Maize</option>
+<option value="wheat">Wheat</option>
+<option value="barley">Barley</option>
+<option value="buckwheat">Buckwheat</option>
+<option value="fingermillet">Finger Millet</option>
+<option value="lentil">Lentil</option>
+<option value="chickpea">Chickpea</option>
+<option value="soyabean">Soyabean</option>
+<option value="pigeonpea">Pigeon Pea</option>
+<option value="mustard">Mustard</option>
+<option value="potato">Potato</option>
+</select>
+<input type="number" id="seedArea" placeholder="Enter Area">
+<select id="seedUnit">
+<option value="hectare">Hectare</option>
+<option value="ropani">Ropani</option>
+<option value="aana">Aana</option>
+<option value="paisa">Paisa</option>
+<option value="daam">Daam</option>
+<option value="kattha">Kattha</option>
+<option value="dhur">Dhur</option>
+<option value="meter">Meter Square</option>
+</select>
+<button onclick="calculateSeed()">Calculate Seed Requirement</button>
+<div id="seedResult" class="result"></div>
+</div>
+
+<div class="card">
+<h2>Crop Fertilizer Calculator</h2>
+<select id="fertCrop" onchange="loadRecommendation()">
+<option value="">Select Crop</option>
+<option value="rice">Rice</option>
+<option value="maize">Maize</option>
+<option value="wheat">Wheat</option>
+<option value="barley">Barley</option>
+<option value="buckwheat">Buckwheat</option>
+<option value="fingermillet">Finger Millet</option>
+<option value="lentil">Lentil</option>
+<option value="chickpea">Chickpea</option>
+<option value="soyabean">Soyabean</option>
+<option value="pigeonpea">Pigeon Pea</option>
+<option value="mustard">Mustard</option>
+<option value="potato">Potato</option>
+</select>
+
+<input type="number" id="nDose" placeholder="N (kg/ha)">
+<input type="number" id="pDose" placeholder="P₂O₅ (kg/ha)">
+<input type="number" id="kDose" placeholder="K₂O (kg/ha)">
+
+<input type="number" id="fertArea" placeholder="Enter Area">
+
+<select id="fertUnit">
+<option value="hectare">Hectare</option>
+<option value="ropani">Ropani</option>
+<option value="aana">Aana</option>
+<option value="paisa">Paisa</option>
+<option value="daam">Daam</option>
+<option value="kattha">Kattha</option>
+<option value="dhur">Dhur</option>
+<option value="meter">Meter Square</option>
+</select>
+
+<button onclick="calculateCropFertilizer()">Calculate Fertilizer</button>
+<div id="fertResult" class="result"></div>
+</div>
+
+<div class="card">
+<h2>Area Converter</h2>
+<input type="number" id="convArea" placeholder="Enter Area">
+
+<select id="fromUnit">
+<option value="hectare">Hectare</option>
+<option value="ropani">Ropani</option>
+<option value="aana">Aana</option>
+<option value="paisa">Paisa</option>
+<option value="daam">Daam</option>
+<option value="kattha">Kattha</option>
+<option value="dhur">Dhur</option>
+<option value="meter">Meter Square</option>
+</select>
+
+<select id="toUnit">
+<option value="hectare">Hectare</option>
+<option value="ropani">Ropani</option>
+<option value="aana">Aana</option>
+<option value="paisa">Paisa</option>
+<option value="daam">Daam</option>
+<option value="kattha">Kattha</option>
+<option value="dhur">Dhur</option>
+<option value="meter">Meter Square</option>
+</select>
+
+<button onclick="convertAreaCalc()">Convert Area</button>
+<div id="convertResult" class="result"></div>
+</div>
+
+</div>
+
+<div class="container">
+  <div class="card contact-card">
+    <h2>Connect with Harish</h2>
+    <p>Follow, subscribe, or contact me for agriculture-related learning and updates.</p>
+    <div class="social-links">
+      <a class="facebook" href="https://www.facebook.com/harishsin9h" target="_blank" rel="noopener noreferrer">Facebook</a>
+      <a class="youtube" href="https://www.youtube.com/@learnkrishi" target="_blank" rel="noopener noreferrer">YouTube</a>
+      <a class="whatsapp" href="https://wa.me/9840213344" target="_blank" rel="noopener noreferrer">WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+<footer>
+<p>Developed by Harichandra Singh (Harish)</p>
+<p>© Copyright 2026 Learn Krishi</p>
+</footer>
+
+<script>
+
+const factors = {
+  hectare: 1,
+  ropani: 0.0508727376,
+  aana: 0.0031795461,
+  paisa: 0.000794886525,
+  daam: 0.00019872163125,
+  kattha: 0.033890625,
+  dhur: 0.00169453125,
+  meter: 0.0001
+};
+
+
+const seedRate={rice:50,maize:20,wheat:120, barley: 100,fingermillet: 8, buckwheat:40, lentil:30, chickpea:85, pigeonpea: 20, soyabean:80, mustard:8,potato:2000};
+
+const cropRecommendation={
+rice:{N:100,P:40,K:30},
+maize:{N:120,P:60,K:40},
+wheat:{N:120,P:50,K:50},
+barley:{N:60,P:30,K:30},
+fingermillet:{N:50,P:20,K:20},
+buckwheat:{N:30,P:30,K:20},
+lentil:{N:20,P:20,K:20},
+chickpea:{N:20,P:40,K:20},
+pigeonpea:{N:20,P:40,K:30},
+soyabean:{N:10,P:40,K:30},
+mustard:{N:60,P:40,K:20},
+potato:{N:100,P:100,K:60}
+};
+
+function toHectare(area,unit){
+ return area*factors[unit];
+}
+
+function calculateSeed(){
+ let area=parseFloat(document.getElementById("seedArea").value);
+ if(isNaN(area)||area<=0){seedResult.innerHTML="Enter valid area";return;}
+ let crop=document.getElementById("crop").value;
+ let seed=toHectare(area,document.getElementById("seedUnit").value)*seedRate[crop];
+ document.getElementById("seedResult").innerHTML="Required Seed: "+seed.toFixed(4)+" kg";
+}
+
+function loadRecommendation(){
+ let c=document.getElementById("fertCrop").value;
+ if(!c) return;
+ nDose.value=cropRecommendation[c].N;
+ pDose.value=cropRecommendation[c].P;
+ kDose.value=cropRecommendation[c].K;
+}
+
+function calculateCropFertilizer(){
+ let ha=toHectare(parseFloat(fertArea.value),fertUnit.value);
+ let N=parseFloat(nDose.value),P=parseFloat(pDose.value),K=parseFloat(kDose.value);
+ if(isNaN(ha)||isNaN(N)||isNaN(P)||isNaN(K)){fertResult.innerHTML="Fill all fields";return;}
+
+ let totalN=N*ha,totalP=P*ha,totalK=K*ha;
+ let dap=totalP/0.46;
+ let nFromDAP=dap*0.18;
+ let urea=Math.max(0,(totalN-nFromDAP)/0.46);
+ let mop=totalK/0.60;
+
+ fertResult.innerHTML=`
+ Total N = ${totalN.toFixed(4)} kg<br>
+ Total P₂O₅ = ${totalP.toFixed(4)} kg<br>
+ Total K₂O = ${totalK.toFixed(4)} kg<br><br>
+ Urea = ${urea.toFixed(4)} kg<br>
+ DAP = ${dap.toFixed(4)} kg<br>
+ MOP = ${mop.toFixed(4)} kg<br><br>
+ Split N Application:<br>
+ Basal (50%) = ${(urea*0.50).toFixed(4)} kg<br>
+ Topdress-1 (25%) = ${(urea*0.25).toFixed(4)} kg<br>
+ Topdress-2 (25%) = ${(urea*0.25).toFixed(4)} kg`;
+}
+
+function convertAreaCalc(){
+ let area=parseFloat(document.getElementById('convArea').value);
+ if(isNaN(area)||area<=0){convertResult.innerHTML='Enter valid area';return;}
+ let hectare=area*factors[fromUnit.value];
+ let result=hectare/factors[toUnit.value];
+ convertResult.innerHTML=`${area} ${fromUnit.value} = ${result.toFixed(4)} ${toUnit.value}`;
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
+
+  <meta name="theme-color" content="#155c38">
+
+  <meta name="description"
+        content="Harichandra Singh (Harish) — Agriculture Trainer and Learn Krishi creator. Agriculture notes, online classes, calculators and resources for students and farmers in Nepal.">
+
+  <title>
+    Harichandra Singh | Agriculture Learning & Resources
+  </title>
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="/css/index.css">
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ======================================
+     HEADER & NAVIGATION
+====================================== -->
+
+<header>
+
+  <div class="wrap nav">
+
+    <a class="brand" href="#home">
+      🌱 Harichandra Singh
+      <small>
+        AGRICULTURE • EDUCATION • LEARN KRISHI
+      </small>
+    </a>
+
+    <button class="menu"
+            id="menuBtn"
+            type="button"
+            aria-label="Open navigation"
+            aria-expanded="false"
+            aria-controls="navLinks">
+      ☰
+    </button>
+
+    <nav class="links"
+         id="navLinks"
+         aria-label="Main navigation">
+
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#notes">Notes</a>
+      <a href="#classes">Online Classes</a>
+
+      <a href="/krishicalculator.html">
+        Krishi Calculator
+      </a>
+
+      <a href="#contact">Contact</a>
+      <a href="#donate">Donate Us</a>
+
+      <button class="btn"
+              type="button"
+              id="loginBtn">
+        Login
+      </button>
+
+    </nav>
+
+  </div>
+
+</header>
+
+<main id="main">
+
+<!-- ======================================
+     HOME / HERO SECTION
+====================================== -->
+
+<section id="home" class="hero">
+
+  <!-- ====================================
+       ANIMATED LATEST UPDATES SECTION
+  ==================================== -->
+
+  <div id="latest"
+       aria-label="Latest website updates and special wishes">
+
+    <!-- Special Occasion Greeting -->
+
+    <div class="latest-wish"
+         id="latestWish"
+         hidden>
+         <div class="celebration-icons" aria-hidden="true">
+  <span class="celebration-icon">🎉</span>
+  <span class="celebration-icon">🎊</span>
+  <span class="celebration-icon">🎈</span>
+  <span class="celebration-icon">✨</span>
+  <span class="celebration-icon">🎆</span>
+  <span class="celebration-icon">🥳</span>
+</div>
+
+      <span class="latest-wish-icon"
+            aria-hidden="true">
+        ✨
+      </span>
+
+      <div class="latest-wish-text">
+
+        <strong id="latestWishTitle">
+          Special Greetings
+        </strong>
+
+        <span id="latestWishMessage">
+          Best wishes from Learn Krishi.
+        </span>
+
+      </div>
+
+
+    </div>
+
+    <!-- Animated Website Notices -->
+
+    <div class="latest-news">
+
+      <div class="latest-label">
+
+        <i class="fa-solid fa-bullhorn"
+           aria-hidden="true"></i>
+
+        <span>Latest Updates</span>
+
+      </div>
+
+      <div class="latest-viewport"
+           tabindex="0"
+           aria-label="Scrolling website announcements">
+
+        <div class="latest-track"
+             id="latestTrack">
+
+          <!-- Notices inserted by JavaScript -->
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- ====================================
+       HERO CONTENT
+  ==================================== -->
+
+  <div class="wrap hero-grid">
+
+    <div class="hero-copy">
+
+        <h1>
+          Learn Agriculture.
+          <br>
+          <span>Grow Together.</span>
+        </h1>
+
+        <p>
+          I'm
+          <strong>Harichandra Singh (Harish)</strong>,
+          an Agriculture Trainer and creator of
+          Learn Krishi. Explore practical resources
+          for agriculture students, Loksewa
+          aspirants and farmers.
+        </p>
+
+        <div class="actions">
+
+          <a class="btn" href="#notes">
+            📚 Explore Notes
+          </a>
+
+          <a class="btn outline" href="#classes">
+            ▶ Online Classes
+          </a>
+
+        </div>
+
+    </div>
+
+    <!-- PROFILE CARD -->
+
+    <aside class="profile">
+
+      <div class="avatar">
+
+        <img src="/Assets/profile.jpg"
+             alt="Harichandra Singh profile photo">
+
+      </div>
+
+      <h2>Harichandra Singh</h2>
+
+      <p>
+        Agriculture Trainer · Educator ·
+        Content Creator
+      </p>
+
+      <div class="social">
+
+        <a href="https://youtube.com/@learnkrishi"
+           target="_blank"
+           rel="noopener noreferrer">
+          YouTube ↗
+        </a>
+
+        <a href="https://facebook.com/@harishsin9h"
+           target="_blank"
+           rel="noopener noreferrer">
+          Facebook ↗
+        </a>
+
+        <a href="#contact">
+          Contact ✉
+        </a>
+
+      </div>
+
+    </aside>
+
+  </div>
+
+</section>
+
+<!-- ======================================
+     QUICK ACCESS CARDS
+====================================== -->
+
+<section class="section">
+
+  <div class="wrap">
+
+    <div class="cards">
+
+      <a class="card" href="#notes">
+
+        <span class="emoji">📖</span>
+
+        <h3>Study Notes</h3>
+
+        <p>
+          Topic-wise agriculture learning resources.
+        </p>
+
+        <span class="textlink">
+          Browse notes →
+        </span>
+
+      </a>
+
+      <a class="card" href="#classes">
+
+        <span class="emoji">💻</span>
+
+        <h3>Online Classes</h3>
+
+        <p>
+          Class schedules and learning information.
+        </p>
+
+        <span class="textlink">
+          View classes →
+        </span>
+
+      </a>
+
+      <a class="card" href="#contact">
+
+        <span class="emoji">✉️</span>
+
+        <h3>Get in Touch</h3>
+
+        <p>
+          Questions, collaborations and support.
+        </p>
+
+        <span class="textlink">
+          Contact me →
+        </span>
+
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================
+     ABOUT SECTION
+====================================== -->
+
+<section id="about" class="section alt">
+
+  <div class="wrap two">
+
+    <div>
+
+      <div class="heading">
+        <div>
+          <h2>About Me</h2>
+        </div>
+      </div>
+
+      <p>
+        I'm Harichandra Singh (Harish),
+        an agriculture graduate pursuing
+        postgraduate study in Agriculture.
+        I work as an Agriculture Trainer
+        and share useful educational content
+        through Learn Krishi.
+      </p>
+
+      <p>
+        My goal is to make reliable agricultural
+        knowledge accessible to students,
+        competitive exam candidates and
+        farming communities in Nepal.
+      </p>
+
+    </div>
+
+    <div class="aboutbox">
+
+      <h3>My Focus Areas</h3>
+
+      <p>
+        Practical agriculture education,
+        student learning, exam preparation
+        and farmer-friendly digital tools.
+      </p>
+
+      <div class="tags">
+
+        <span class="tag">
+          Agriculture Training
+        </span>
+
+        <span class="tag">
+          Loksewa Preparation
+        </span>
+
+        <span class="tag">
+          Farmer Education
+        </span>
+
+        <span class="tag">
+          Learn Krishi
+        </span>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================
+     AGRICULTURE NOTES
+====================================== -->
+
+<section id="notes" class="section">
+
+  <div class="wrap">
+
+    <div class="heading">
+
+      <div>
+
+        <h2>📚 Agriculture Notes</h2>
+
+        <p>
+          Find agriculture learning materials
+          by topic and subject.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="searchbar">
+
+      <input id="noteSearch"
+             class="field"
+             type="search"
+             placeholder="Search notes (e.g., soil, crop, pests)..."
+             aria-label="Search notes">
+
+      <select id="noteFilter"
+              class="field"
+              aria-label="Filter note category">
+
+        <option value="all">
+          All subjects
+        </option>
+
+        <option value="Agronomy">
+          Agronomy
+        </option>
+
+        <option value="Soil Science">
+          Soil Science
+        </option>
+
+        <option value="Plant Protection">
+          Plant Protection
+        </option>
+
+        <option value="Horticulture">
+          Horticulture
+        </option>
+
+        <option value="Loksewa">
+          Loksewa
+        </option>
+
+      </select>
+
+    </div>
+
+    <div id="noteList"
+         class="note-list"
+         aria-live="polite">
+
+      <!-- Notes loaded through JavaScript -->
+
+    </div>
+
+    <p class="notice notice-spaced">
+      📌 Browse available agriculture notes.
+      Some materials may require login or payment
+      for downloading.
+    </p>
+
+  </div>
+
+</section>
+
+<!-- ======================================
+     ONLINE CLASSES
+====================================== -->
+
+<section id="classes" class="section alt">
+
+  <div class="wrap">
+
+    <div class="heading">
+
+      <div>
+
+        <h2>💻 Online Classes</h2>
+
+        <p>
+          Agriculture-related educational videos
+          and learning resources.
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="class-grid">
+
+      <article class="class-card">
+
+        <iframe
+          src="https://www.youtube.com/embed/cH1pxsddb5k"
+          title="Agriculture Online Class 1"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+      </article>
+
+      <article class="class-card">
+
+        <iframe
+          src="https://www.youtube.com/embed/jyIF0-9j-Ok"
+          title="Agriculture Online Class 2"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+      </article>
+
+      <article class="class-card">
+
+        <iframe
+          src="https://www.youtube.com/embed/59Z6HveU05w"
+          title="Agriculture Online Class 3"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+      </article>
+
+      <article class="class-card">
+
+        <iframe
+          src="https://www.youtube.com/embed/2ftlEPAx_Ds"
+          title="Agriculture Online Class 4"
+          loading="lazy"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen>
+        </iframe>
+
+      </article>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================
+     CONTACT SECTION
+====================================== -->
+
+<section id="contact" class="section alt">
+
+  <div class="wrap">
+
+    <div class="heading">
+
+      <div>
+
+        <h2>📩 Contact & Connect</h2>
+
+        <p>
+          Have questions about agriculture,
+          online classes, study notes or
+          collaboration? Let's connect!
+        </p>
+
+      </div>
+
+    </div>
+
+    <div class="contact-layout">
+
+      <!-- Contact information -->
+
+      <div class="contact-info">
+
+        <h3>Connect With Me</h3>
+
+        <p>
+          Follow Harichandra Singh (Harish)
+          and Learn Krishi for agriculture
+          education, updates and resources.
+        </p>
+
+        <div class="social-grid">
+
+          <a href="https://facebook.com/@harishsin9h"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-item facebook">
+
+            <i class="fa-brands fa-facebook-f"></i>
+            <span>Facebook</span>
+
+          </a>
+
+          <a href="https://youtube.com/@learnkrishi"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-item youtube">
+
+            <i class="fa-brands fa-youtube"></i>
+            <span>YouTube</span>
+
+          </a>
+
+          <a href="https://instagram.com/@harishsin9h"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-item instagram">
+
+            <i class="fa-brands fa-instagram"></i>
+            <span>Instagram</span>
+
+          </a>
+
+          <a href="https://tiktok.com/"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-item tiktok">
+
+            <i class="fa-brands fa-tiktok"></i>
+            <span>TikTok</span>
+
+          </a>
+
+          <a href="https://wa.me/9840213344"
+             target="_blank"
+             rel="noopener noreferrer"
+             class="social-item whatsapp">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            <span>WhatsApp</span>
+
+          </a>
+
+          <a href="mailto:harichandrasingh222@gmail.com"
+             class="social-item email">
+
+            <i class="fa-solid fa-envelope"></i>
+            <span>Email</span>
+
+          </a>
+
+        </div>
+
+      </div>
+
+      <!-- Contact form -->
+
+      <div class="card contact">
+
+        <h3>Send a Message</h3>
+
+        <form id="contactForm">
+
+          <div>
+
+            <label for="contactName">
+              Your Name
+            </label>
+
+            <input id="contactName"
+                   class="field"
+                   type="text"
+                   required
+                   maxlength="100"
+                   placeholder="Enter your full name">
+
+          </div>
+
+          <div>
+
+            <label for="contactEmail">
+              Email Address
+            </label>
+
+            <input id="contactEmail"
+                   class="field"
+                   type="email"
+                   required
+                   placeholder="you@example.com">
+
+          </div>
+
+          <div>
+
+            <label for="contactMessage">
+              Your Message
+            </label>
+
+            <textarea id="contactMessage"
+                      class="field"
+                      required
+                      maxlength="2000"
+                      placeholder="Write your message..."></textarea>
+
+          </div>
+
+          <button class="btn" type="submit">
+            Send Message →
+          </button>
+
+          <span class="small">
+            This form opens your email application.
+          </span>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- ======================================
+     DONATION SECTION
+====================================== -->
+
+<section id="donate" class="section">
+
+  <div class="wrap-style">
+
+    <div class="donate">
+
+      <h2>
+        💚 Support Free Agriculture Education
+      </h2>
+
+      <p>
+        Your encouragement helps me create
+        educational notes, videos and resources
+        for students and farmers.
+        <br>
+        Scan the QR code. Donations are entirely optional.
+      </p>
+
+      <button id="donateBtn"
+              class="btn"
+              type="button">
+        Donate Us →
+      </button>
+
+      <p id="donateInfo"
+         class="hidden"
+         role="status">
+
+        Online donation is not yet enabled.
+        Verified payment details will appear here
+        after setup. Please do not send money
+        to unverified accounts.
+
+      </p>
+
+    </div>
+
+    <div class="qr">
+
+      <img src="/Assets/payment.jpg"
+           width="120"
+           height="200"
+           alt="Donation payment QR code">
+
+    </div>
+
+  </div>
+
+</section>
+
+</main>
+
+<!-- ======================================
+     FOOTER
+====================================== -->
+
+<footer class="footer">
+
+  <div class="wrap footer-inner">
+
+    <div>
+
+      <strong>
+        🌱 Harichandra Singh
+      </strong>
+
+      <br>
+
+      <small>
+        Learn • Share • Grow
+      </small>
+
+    </div>
+
+    <small>
+
+      © <span id="year"></span>
+      Harichandra Singh (Harish).
+      All rights reserved.
+
+    </small>
+
+  </div>
+
+</footer>
+
+<!-- ======================================
+     STUDENT LOGIN MODAL
+====================================== -->
+
+<div class="modal"
+     id="loginModal"
+     role="dialog"
+     aria-modal="true"
+     aria-labelledby="loginTitle"
+     aria-hidden="true">
+
+  <div class="dialog">
+
+    <button class="close"
+            id="closeLogin"
+            type="button"
+            aria-label="Close login">
+      ×
+    </button>
+
+    <h2 id="loginTitle">
+      Student Login
+    </h2>
+
+    <p>
+      Student accounts are coming soon.
+      Secure login will be enabled when
+      an authentication service is connected.
+    </p>
+
+    <form id="loginForm">
+
+      <div>
+
+        <label for="loginEmail">
+          Email
+        </label>
+
+        <input class="field"
+               id="loginEmail"
+               type="email"
+               autocomplete="username"
+               placeholder="student@example.com"
+               required>
+
+      </div>
+
+      <div>
+
+        <label for="loginPassword">
+          Password
+        </label>
+
+        <input class="field"
+               id="loginPassword"
+               type="password"
+               autocomplete="current-password"
+               placeholder="Password"
+               required>
+
+      </div>
+
+      <button class="btn"
+              type="submit"
+              disabled
+              title="Authentication not yet configured">
+
+        Login (Coming Soon)
+
+      </button>
+
+      <span class="small">
+        Please do not enter a real password yet.
+      </span>
+
+    </form>
+
+  </div>
+
+</div>
+
+<!-- ======================================
+     WEBSITE JAVASCRIPT
+====================================== -->
+
+<script src="/js/index.js"></script>
+
+</body>
+</html>
