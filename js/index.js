@@ -90,13 +90,13 @@ const notes = [
   {
     id: 'food-crop-2082',
     title: 'Food Crop Production 2082',
-    category: 'Agronomy',
+    category: '9-12 Agriculture',
     description:
-      'Food crop production questions and study materials.',
+      'Food crop production questions paper.',
     url:
-      'Assets/All Notes/Food Crop Production 2082 Question.pdf',
-    type: 'free',
-    price: 0
+      'https://drive.google.com/file/d/1AJ3QBTO89HMFDZHlWK-XjEg0EXXVBh0R/view?usp=drive_link',
+    type: 'premium',
+    price: 10
   },
 
   {
@@ -104,24 +104,24 @@ const notes = [
     title: 'Industrial Entomology & Aquaculture',
     category: 'Plant Protection',
     description:
-      'Industrial entomology and aquaculture study notes.',
+      'Introduction of Cocoon, Cocoon quality & Its characteristics.',
     url:
-      'Assets/All Notes/Industrial Entomology & Aquaculture by Harichandra Singh.pdf',
+      'https://drive.google.com/file/d/1YDJBI5KI41uf7WTPsN_WybI6XocGtuYC/view?usp=drive_link',
     type: 'premium',
-    price: 99
+    price: 20
   },
 
-  {
-    id: 'commercial-fruit',
-    title: 'Commercial Fruit Production',
-    category: 'Horticulture',
-    description:
-      'Commercial fruit production and post-harvest technology.',
-    url:
-      'Assets/All Notes/Commercial fruit production and pht.pdf',
-    type: 'premium',
-    price: 149
-  },
+  // {
+  //   id: 'commercial-fruit',
+  //   title: 'Commercial Fruit Production',
+  //   category: 'Horticulture',
+  //   description:
+  //     'Commercial fruit production and post-harvest technology.',
+  //   url:
+  //     'Assets/All Notes/Commercial fruit production and pht.pdf',
+  //   type: 'premium',
+  //   price: 149
+  // },
 
   {
     id: 'citrus-production',
@@ -130,11 +130,107 @@ const notes = [
     description:
       'Citrus cultivation and management notes.',
     url:
-      'Assets/All Notes/Citrus.pdf',
+      'https://drive.google.com/file/d/1LInXC3iHGKxP3GkgZ3GPhGiWkLIhSYrm/view?usp=sharing',
+    type: 'premium',
+    price: 49
+  },
+  // Added Notes:
+{
+    id: 'Ag Diary',
+    title: 'Ag Diary Latest',
+    category: 'Ag Diary',
+    description:
+      'Agriculture Diary / Krishi Diary.',
+    url:
+      'https://drive.google.com/file/d/18A2HO2xulYPF0gbg2ftcFtftz-drM9dQ/view?usp=drive_link',
     type: 'free',
     price: 0
-  }
+  },
+{
+    id: 'Weed',
+    title: 'Weed Management',
+    category: 'Agronomy',
+    description:
+      'Weed Management.',
+    url:
+      'https://drive.google.com/file/d/149Yewv0qxXRlwU37wGlk9gghJIQemZBM/view?usp=drive_link',
+    type: 'free',
+    price: 0
+  },
+  {
+    id: 'Soil',
+    title: 'Soil Science',
+    category: 'Soil Science',
+    description:
+      'Soil Science Complete Notes.',
+    url:
+      'https://drive.google.com/file/d/1BASxs8QlIpWy90ZF7rD8D_CY0fcglHTT/view?usp=drive_link',
+    type: 'premium',
+    price: 49
+  },
+  {
+    id: 'IQ',
+    title: 'IQ',
+    category: 'IQ',
+    description: 'Full IQ Notes.',
+    url:
+      'https://drive.google.com/file/d/1bqSTrbpD2HC-3w2gcg_ypmsyMHnbv4Dv/view?usp=drive_link',
+    type: 'premium',
+    price: 49
+  },
+  {
+    id: 'IQ',
+    title: 'IQ',
+    category: 'Loksewa JT/JTA',
+    description: 'Full IQ Notes.',
+    url:
+      'https://drive.google.com/file/d/1bqSTrbpD2HC-3w2gcg_ypmsyMHnbv4Dv/view?usp=drive_link',
+    type: 'premium',
+    price: 49
+  },
+  {
+    id: 'IQ',
+    title: 'IQ',
+    category: 'Loksewa Ag Officer',
+    description: 'Full IQ Notes.',
+    url:
+      'https://drive.google.com/file/d/1bqSTrbpD2HC-3w2gcg_ypmsyMHnbv4Dv/view?usp=drive_link',
+    type: 'premium',
+    price: 49
+  },
+   {
+    id: 'GK',
+    title: 'GK',
+    category: 'GK',
+    description: 'Full Gk Notes.',
+    url:
+      'https://drive.google.com/file/d/1B2aWeII7qmGFZs8cSCXutL-F0JJryXxU/view?usp=drive_link',
+    type: 'premium',
+    price: 49
+  },
+  {
+    id: 'Google Drive',
+    title: 'Google Drive Notes',
+    category: 'Google Drive',
+    description: 'Important Notes are available here',
+    url:
+      'https://drive.google.com/drive/folders/1btUar0yL4n-TQy8gmL7A2GmhwglqABZi?usp=drive_link',
+    type: 'free',
+    price: 0
+  },
 
+  // {
+  //   id: 'Soil',
+  //   title: 'Soil Science',
+  //   category: 'Soil Science',
+  //   description:
+  //     'Soil Science Complete Notes.',
+  //   url:
+  //     'https://drive.google.com/file/d/1BASxs8QlIpWy90ZF7rD8D_CY0fcglHTT/view?usp=drive_link',
+  //   type: 'premium',
+  //   price: 49
+  // },
+  
 ];
 
 /* ==========================================
@@ -564,17 +660,6 @@ document.addEventListener('keydown', e => {
 
 });
 
-/* LOGIN FORM */
-
-/*
-  Login interface only.
-
-  Real authentication requires:
-  - Supabase Auth or another provider
-  - Secure session handling
-  - Server-side access verification
-*/
-
 const loginForm = $('loginForm');
 
 if (loginForm) {
@@ -742,8 +827,8 @@ if (contactForm) {
     },
 
     {
-      text: '🎓 Watch Agriculture Online Classes',
-      href: '#classes'
+      text: '🎓 Watch Agriculture Related Videos',
+      href: '#videos'
     },
 
     {
@@ -771,9 +856,9 @@ if (contactForm) {
     {
       start: '2026-10-18',
       end: '2026-10-22',
-      title: '🎉 Happy Dashain & Tihar!',
+      title: '🎉 विजया दशमी तथा शुभ दीपावलीको हार्दिक मंगलमय शुभकामना ब्यक्त गर्दछौँ 💕',
       message:
-        'Wishing you and your family happiness, peace and prosperity.'
+        'विजया दशमी तथा शुभ दीपावलीको पावन अवसरमा यहाँ र यहाँको परिवारमा सुख, शान्ति, समृद्धि, सुस्वास्थ्य र सफलताको हार्दिक मंगलमय शुभकामना! 🌺🙏🪔'
     },
 
     {
@@ -899,5 +984,4 @@ if (contactForm) {
 /* ==========================================
    END OF JAVASCRIPT
    Developed for Harichandra Singh
-   Seed Calculator Removed
-========================================== */
+  ========================================== */
